@@ -1,0 +1,38 @@
+export const solutions = [
+  {
+    id: 'enterprise-modernization',
+    title: 'Enterprise Modernization Stack',
+    tagline: 'Legacy Refactoring & Cloud Migration',
+    description: 'Transform monolithic systems into resilient, high-speed microservices and edge architectures without downtime.',
+    features: ['Zero-downtime migration strategy', 'Event-driven microservices', 'Automated regression test suites', 'Enterprise RBAC & compliance'],
+    icon: '⚡',
+    badge: 'Popular for Enterprise',
+  },
+  {
+    id: 'mvp-launchpad',
+    title: 'Startup MVP Launchpad',
+    tagline: '0-to-1 Product Development',
+    description: 'Ship high-performing, investor-ready SaaS or mobile platforms in 6-8 weeks with production infrastructure.',
+    features: ['Rapid prototype to production', 'Scalable multi-tenant backend', 'Integrated analytics & billing', 'Staging & CI/CD from day 1'],
+    icon: '🚀',
+    badge: 'Fastest Delivery',
+  },
+  {
+    id: 'ai-data-engine',
+    title: 'AI & Data Integration Engine',
+    tagline: 'Intelligent Workflows & RAG Systems',
+    description: 'Embed domain-tuned LLM agents, vector search, and real-time inference directly into customer applications.',
+    features: ['Custom RAG & VectorDB setup', 'LLM API gateway & rate limiting', 'Real-time telemetry & guardrails', 'Private data isolation'],
+    icon: '🧠',
+    badge: 'AI Powered',
+  },
+  {
+    id: 'scalable-web-platform',
+    title: 'High-Scale Web Platform',
+    tagline: 'Headless & High-Traffic Architecture',
+    description: 'Ultra-fast web platforms engineered to process millions of concurrent requests with sub-100ms global latency.',
+    features: ['Headless CMS & GraphQL APIs', 'Global edge caching & CDN setup', 'Automated auto-scaling infrastructure', '99.99% uptime guarantee'],
+    icon: '🌐',
+    badge: 'High Performance',
+  },
+]

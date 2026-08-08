@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    id: 'ledgerline',
+    name: 'Ledgerline',
+    category: 'Fintech',
+    summary: 'A reconciliation dashboard that cut a finance team\u2019s month-end close from six days to one.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
+    image: '/images/projects/ledgerline.png',
+    year: 2025,
+  },
+  {
+    id: 'northwind-health',
+    name: 'Northwind Health',
+    category: 'Healthcare',
+    summary: 'Patient intake and scheduling rebuilt on a HIPAA-ready stack, serving 40+ clinics.',
+    stack: ['Next.js', 'Python', 'GCP'],
+    image: '/images/projects/northwind-health.png',
+    year: 2024,
+  },
+  {
+    id: 'crate-and-craft',
+    name: 'Crate & Craft',
+    category: 'E-commerce',
+    summary: 'Headless storefront and inventory sync that handled a 12x traffic spike on launch day.',
+    stack: ['React', 'Shopify Hydrogen', 'Redis'],
+    image: '/images/projects/crate-and-craft.png',
+    year: 2024,
+  },
+  {
+    id: 'signalboard',
+    name: 'Signalboard',
+    category: 'SaaS',
+    summary: 'Real-time analytics platform processing 2M+ events a day for mid-market SaaS teams.',
+    stack: ['React', 'Go', 'Kafka', 'ClickHouse'],
+    image: '/images/projects/signalboard.png',
+    year: 2023,
+  },
+]
