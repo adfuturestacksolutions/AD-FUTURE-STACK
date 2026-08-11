@@ -11,7 +11,6 @@ import {
   Mail,
   Clock,
   PhoneCall,
-  Search,
 } from 'lucide-react'
 import { NAV_LINKS } from '../../data/navigation.js'
 import { SITE_NAME, CONTACT_EMAIL, CONTACT_PHONE } from '../../utils/constants.js'
@@ -47,29 +46,29 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-md transition-all font-sans bg-white">
       {/* TOP HEADER BAR */}
-      <div className="bg-slate-900 text-slate-300 text-xs py-2 px-32 border-b border-slate-800 hidden md:block">
+      <div className="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 lg:px-32 border-b border-slate-800 hidden md:block">
         <div className="max-w-9xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="text-slate-400">Welcome to IT Solutions & Services</span>
             <div className="flex items-center gap-1.5 text-slate-300">
-              <Mail className="h-3.5 w-3.5 #2563EB " />
-              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{CONTACT_EMAIL}</a>
+              <Mail className="h-3.5 w-3.5 text-violet-400" />
+              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors">{CONTACT_EMAIL}</a>
             </div>
             <div className="flex items-center gap-1.5 text-slate-300">
-              <Clock className="h-3.5 w-3.5 #2563EB " />
-              <span>Mon - Sat: 8:00 am - 7:00 pm</span>
+
+              <span>Let's Build Together</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:#2563EB  transition-colors">Twitter</a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:#2563EB  transition-colors">Facebook</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:#2563EB  transition-colors">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors">Twitter</a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors">Facebook</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors">LinkedIn</a>
           </div>
         </div>
       </div>
 
       {/* MAIN NAVBAR */}
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-24 h-20 flex items-center justify-between">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-32 h-20 flex items-center justify-between">
         {/* LEFT: Brand Logo */}
         <Link to="/" className="flex items-center gap-3 group shrink-0">
           <div className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900 p-1 shadow-sm transition-transform group-hover:scale-105">
@@ -81,7 +80,7 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-sans text-xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            <span className="font-sans text-xl font-bold tracking-tight text-slate-900 leading-tight">
               AD FUTURESTACK
             </span>
             <span className="text-[10px] font-mono font-extrabold tracking-widest text-violet-600 uppercase">
@@ -109,7 +108,7 @@ export default function Navbar() {
                   to={link.to}
                   end={link.to === '/'}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 text-sm font-bold transition-colors uppercase tracking-wider ${isActive || isParentActive
+                    `flex items-center gap-1 text-small font-semibold transition-colors uppercase tracking-wider ${isActive || isParentActive
                       ? 'text-violet-600'
                       : 'text-slate-800 hover:text-violet-600'
                     }`
@@ -169,13 +168,13 @@ export default function Navbar() {
         </nav>
 
         {/* RIGHT SIDE: Phone Call Badge & CTA */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-9">
           <div className="hidden xl:flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-violet-600 text-white flex items-center justify-center shadow-md">
               <PhoneCall className="h-5 w-5" />
             </div>
             <div className="flex flex-col">
-              <span className="text-[10px] font-mono uppercase text-slate-500 font-bold">Call Anytime</span>
+              <span className="text-[10px] font-mono uppercase text-slate-500 font-bold">Let's Talk</span>
               <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-extrabold text-slate-900 hover:text-violet-600 transition-colors">
                 {CONTACT_PHONE}
               </a>
@@ -184,9 +183,9 @@ export default function Navbar() {
 
           <Link
             to="/contact"
-            className="hidden sm:inline-flex items-center justify-center rounded-lg bg-violet-600 px-6 py-3 text-xs font-extrabold text-white uppercase tracking-wider hover:bg-violet-700 transition-all shadow-md hover:shadow-violet-600/30 active:scale-95"
+            className="hidden sm:inline-flex items-center justify-center rounded-lg bg-violet-800 px-6 py-3 text-small font-bold text-white uppercase tracking-wider hover:bg-violet-700 transition-all shadow-md hover:shadow-violet-600/30 active:scale-95"
           >
-            Get A Quote
+            Contact us
           </Link>
 
           <button

@@ -1,8 +1,8 @@
 export const SITE_NAME = 'AD FutureStack'
 export const SITE_TAGLINE = 'Architecting Enterprise Digital Solutions'
-export const CONTACT_EMAIL = 'contact@adfuturestack.com'
-export const CONTACT_PHONE = '+1 (800) 555-3888'
-export const OFFICE_ADDRESS = '750 Tech Innovation Way, Silicon Valley, CA'
+export const CONTACT_EMAIL = 'adfuturestacksolutions@gmail.com'
+export const CONTACT_PHONE = '+91 9488681492'
+export const OFFICE_ADDRESS = 'Kovilpatti , TamilNadu'
 
 export const SOCIAL_LINKS = [
   { label: 'GitHub', href: 'https://github.com', icon: 'Github' },

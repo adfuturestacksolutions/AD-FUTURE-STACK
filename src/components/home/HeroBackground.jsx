@@ -9,13 +9,13 @@ export default function HeroBackground({ bgScale = 1, bgOpacity = 1, mousePos = 
     >
       {/* 1. Full Image Background (Modern IT Team Working) */}
       <img
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="IT Solutions & Services Team Workspace"
         className="w-full h-full object-cover filter brightness-[0.45] contrast-[1.1]"
       />
 
       {/* 2. Dark Tint Overlay for Base Readability */}
-      <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-slate-950/20 mix-blend-multiply" />
 
 
       {/* 5. Subtle Grid / Vector Lines */}
