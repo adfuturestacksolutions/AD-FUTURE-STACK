@@ -81,7 +81,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-sans text-xl font-bold tracking-tight text-slate-900 leading-tight">
-              AD FUTURESTACK
+              AD FUTURE STACK
             </span>
             <span className="text-[10px] font-mono font-extrabold tracking-widest text-violet-600 uppercase">
               IT SOLUTIONS & SERVICES
@@ -175,7 +175,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-[10px] font-mono uppercase text-slate-500 font-bold">Let's Talk</span>
-              <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-extrabold text-slate-900 hover:text-violet-600 transition-colors">
+              <a href={`tel:${CONTACT_PHONE}`} className="text-normal font-semibold text-slate-900 hover:text-violet-600 transition-colors">
                 {CONTACT_PHONE}
               </a>
             </div>
