@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import HeroBackground from './HeroBackground.jsx'
 import Container from '../common/Container.jsx'
 
@@ -18,48 +18,38 @@ export default function Hero() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-center items-center bg-slate-950 text-white overflow-hidden select-none py-20 lg:py-28"
+      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-end items-start bg-slate-950 text-white overflow-hidden select-none pb-0 sm:pb-12 lg:pb-16 font-montserrat"
     >
+      {/* Background Image Layer */}
       <HeroBackground mousePos={mousePos} />
 
-      {/* HERO CONTENT */}
-      <Container
-        className="relative z-20 text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8"
-      >
-        {/* Eyebrow / Subtitle */}
-        <div className="animate-hero-fade-up opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+      {/* FLOATING CARD OVERLAY MATCHING REFERENCE CAPGEMINI DESIGN (SHARP RECTANGULAR EDGES, SHIFTED LEFT) */}
+      <Container className="relative z-10 w-full font-montserrat px-0 sm:px-6 lg:px-8">
+        <div className="max-w-3xl lg:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-8 sm:p-12 lg:p-14 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-6 animate-hero-fade-up font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
 
-        </div>
-
-        {/* Main Headline matching Reference */}
-        <div className="animate-hero-fade-up opacity-0 max-w-5xl" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <h1 className="font-normal text-7xl text-white tracking-tight uppercase leading-[1.05] drop-shadow-md">
-            WE BUILD DIGITAL
-            EXPERIENCES THAT MATTER
-
+          {/* Main Headline */}
+          <h1 className="font-montserrat font-semibold text-3xl sm:text-5xl lg:text-5xl text-white tracking-tight uppercase leading-[1.12] sm:leading-[1.08] drop-shadow-md">
+            WE BUILD DIGITAL EXPERIENCES THAT MATTER
           </h1>
-        </div>
 
-        {/* Supporting Text */}
-        <div className="animate-hero-fade-up opacity-0 max-w-2xl" style={{ animationDelay: '0.35s', animationFillMode: 'forwards' }}>
-          <p className="text-base sm:text-lg text-slate-200 font-normal leading-relaxed text-center drop-shadow-sm">
+          {/* Supporting Text */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-100 font-normal leading-relaxed drop-shadow-xs font-montserrat">
             We partner with ambitious companies to deliver scalable cloud architecture, custom software development, and intelligent digital transformation.
           </p>
-        </div>
 
-        {/* Primary CTA Button with Accent Arrow */}
-        <div className="animate-hero-fade-up opacity-0 pt-4 flex flex-col sm:flex-row items-center gap-6" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-          <Link
-            to="/services"
-            className="group relative inline-flex items-center justify-center gap-3 bg-violet-700 text-white px-9 py-4 rounded-md font-bold text-medium uppercase tracking-widest hover:bg-violet-700 transition-all shadow-xl hover:shadow-violet-700/40 active:scale-95"
-          >
-            <span>Let's Build</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          {/* Action CTA Button */}
+          <div className="pt-2 font-montserrat">
+            <Link
+              to="/services"
+              className="group inline-flex items-center gap-3 bg-white text-violet-900 px-8 py-3.5 rounded-none font-bold text-xs uppercase tracking-widest hover:bg-slate-100 hover:text-violet-950 transition-all shadow-lg hover:shadow-white/20 active:scale-95 font-montserrat cursor-pointer"
+            >
+              <span>Let's Build</span>
+              <ArrowRight className="h-4 w-4 text-violet-900 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
         </div>
       </Container>
-
-
     </section>
   )
 }
