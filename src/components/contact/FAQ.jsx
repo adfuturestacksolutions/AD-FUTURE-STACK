@@ -34,10 +34,10 @@ export default function FAQ() {
           <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
             <button
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-              className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-violet-600 transition-colors"
+              className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-violet-700 transition-colors"
             >
               <span>{faq.q}</span>
-              <ChevronDown className={`h-5 w-5 text-violet-600 transition-transform duration-200 ${openIndex === idx ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`h-5 w-5 text-violet-700 transition-transform duration-200 ${openIndex === idx ? 'rotate-180' : ''}`} />
             </button>
             {openIndex === idx && (
               <div className="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">

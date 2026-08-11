@@ -15,21 +15,21 @@
   }
 
   body {
-    @apply bg-white text-slate-900 antialiased selection:bg-violet-600 selection:text-white;
+    @apply bg-white text-slate-900 antialiased selection:bg-violet-700 selection:text-white;
   }
 }
 
 /* Custom Light & Dark Grid Patterns */
 .bg-tech-grid-dark {
   background-size: 40px 40px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 .bg-tech-grid-light {
   background-size: 32px 32px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
 }
@@ -54,7 +54,7 @@
 }
 
 .text-gradient-cyan {
-  @apply bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-violet-700 via-indigo-600 to-purple-700 bg-clip-text text-transparent;
 }
 
 /* Custom scrollbars */

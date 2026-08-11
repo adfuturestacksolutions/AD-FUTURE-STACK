@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="animate-hero-fade-up opacity-0 pt-4 flex flex-col sm:flex-row items-center gap-6" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
           <Link
             to="/services"
-            className="group relative inline-flex items-center justify-center gap-3 bg-violet-600 text-white px-9 py-4 rounded-md font-bold text-medium uppercase tracking-widest hover:bg-violet-700 transition-all shadow-xl hover:shadow-violet-600/40 active:scale-95"
+            className="group relative inline-flex items-center justify-center gap-3 bg-violet-700 text-white px-9 py-4 rounded-md font-bold text-medium uppercase tracking-widest hover:bg-violet-700 transition-all shadow-xl hover:shadow-violet-700/40 active:scale-95"
           >
             <span>Let's Build</span>
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

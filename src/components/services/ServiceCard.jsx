@@ -1,4 +1,4 @@
-import { Cpu, Code, ShieldCheck, Cloud, Layers, Smartphone } from 'lucide-react'
+import { Cpu, Code, ShieldCheck, Cloud, Layers, Smartphone, ArrowRight } from 'lucide-react'
 
 const iconMap = {
   'product-engineering': <Code className="h-5 w-5" />,
@@ -19,16 +19,16 @@ export default function ServiceCard({ service }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {/* Purple Icon Badge overlapping bottom right of image */}
-        <div className="absolute bottom-4 right-4 h-12 w-12 rounded-xl bg-violet-600 text-white flex items-center justify-center shadow-lg border-2 border-white">
+        <div className="absolute bottom-4 right-4 h-12 w-12 rounded-xl bg-violet-700 text-white flex items-center justify-center shadow-lg border-2 border-white">
           {iconMap[service.id] || <Cpu className="h-5 w-5" />}
         </div>
       </div>
 
       <div className="p-6 space-y-3">
-        <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-violet-600 block">
+        <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-slate-500 block">
           {service.layer}
         </span>
-        <h3 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-violet-600 transition-colors">
+        <h3 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors">
           {service.title}
         </h3>
         <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
@@ -38,8 +38,9 @@ export default function ServiceCard({ service }) {
 
       <div className="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
         <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Enterprise Ready</span>
-        <span className="text-xs font-bold text-violet-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-          Explore &rarr;
+        <span className="text-xs font-bold text-slate-900 group-hover:text-violet-700 transition-colors inline-flex items-center gap-1">
+          <span>Explore</span>
+          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
         </span>
       </div>
     </div>

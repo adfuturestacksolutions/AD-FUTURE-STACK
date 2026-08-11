@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-sans selection:bg-violet-600 selection:text-white">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-sans selection:bg-violet-700 selection:text-white">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">

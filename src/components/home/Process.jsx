@@ -32,33 +32,7 @@ const steps = [
 export default function Process() {
   return (
     <section className="py-20 bg-slate-50/70 border-b border-slate-200/80">
-      <Container>
-        <SectionHeading
-          eyebrow="Methodology"
-          title="Our Development Process"
-          subtitle="A battle-tested 4-step framework that guarantees speed, quality, and complete transparency."
-          centered={true}
-          className="mb-16"
-        />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step) => {
-            const IconComponent = step.icon
-            return (
-              <div key={step.num} className="bg-white rounded-2xl p-6 shadow-md border border-slate-200 hover:border-violet-500/50 hover:shadow-xl transition-all duration-300 relative group">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl font-mono font-extrabold text-violet-600/30 group-hover:text-violet-600 transition-colors">{step.num}</span>
-                  <div className="h-10 w-10 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-violet-600">
-                    <IconComponent className="h-5 w-5" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{step.description}</p>
-              </div>
-            )
-          })}
-        </div>
-      </Container>
     </section>
   )
 }
