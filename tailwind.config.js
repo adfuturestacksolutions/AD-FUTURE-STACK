@@ -20,6 +20,7 @@ export default {
         display: ['Montserrat', 'sans-serif'],
         body: ['Montserrat', 'sans-serif'],
         sans: ['Montserrat', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {

@@ -4,13 +4,13 @@ import { SITE_NAME, CONTACT_EMAIL, CONTACT_PHONE, OFFICE_ADDRESS } from '../../u
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 border-t border-slate-800 text-slate-400 font-sans">
+    <footer className="bg-slate-950 border-t border-slate-800 text-slate-400 font-montserrat">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Brand Col */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
+          <div className="lg:col-span-2 space-y-4 font-montserrat">
+            <Link to="/" className="flex items-center gap-3 font-montserrat">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 border border-slate-800 p-1">
                 <img
                   src="/images/logo/ad-logo.png"
@@ -19,16 +19,16 @@ export default function Footer() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-sans text-lg font-bold text-white tracking-tight leading-tight">
-                  AD FUTURESTACK
+              <div className="flex flex-col font-montserrat">
+                <span className="font-montserrat text-lg font-bold text-white tracking-tight leading-tight">
+                  AD FUTURE STACK
                 </span>
-                <span className="text-[10px] font-mono tracking-widest text-violet-400 uppercase font-bold">
+                <span className="text-[10px] font-montserrat tracking-widest text-violet-400 uppercase font-bold">
                   IT SOLUTIONS & SERVICES
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+            <p className="text-sm text-slate-400 max-w-sm leading-relaxed font-montserrat">
               Architecting next-generation digital products, intelligent systems, and scalable cloud platforms for ambitious enterprises worldwide.
             </p>
             <div className="flex items-center gap-3 pt-2">
@@ -45,56 +45,56 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
-            <ul className="space-y-2.5 text-sm">
-              <li><Link to="/" className="hover:text-violet-400 transition-colors">Home</Link></li>
-              <li><Link to="/services" className="hover:text-violet-400 transition-colors">Services</Link></li>
-              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors">Capabilities</Link></li>
-              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors">Solutions</Link></li>
-              <li><Link to="/projects" className="hover:text-violet-400 transition-colors">Case Studies</Link></li>
+          <div className="font-montserrat">
+            <h4 className="text-xs font-montserrat font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
+            <ul className="space-y-2.5 text-sm font-montserrat">
+              <li><Link to="/" className="hover:text-violet-400 transition-colors font-montserrat">Home</Link></li>
+              <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Services</Link></li>
+              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Capabilities</Link></li>
+              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors font-montserrat">Solutions</Link></li>
+              <li><Link to="/projects" className="hover:text-violet-400 transition-colors font-montserrat">Case Studies</Link></li>
             </ul>
           </div>
 
           {/* Solutions & Tech */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-white mb-4">Expertise</h4>
-            <ul className="space-y-2.5 text-sm">
-              <li><Link to="/services" className="hover:text-violet-400 transition-colors">Product Engineering</Link></li>
-              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors">AI & RAG Workflows</Link></li>
-              <li><Link to="/about" className="hover:text-violet-400 transition-colors">About Our Team</Link></li>
-              <li><Link to="/contact" className="hover:text-violet-400 transition-colors">Consultation</Link></li>
+          <div className="font-montserrat">
+            <h4 className="text-xs font-montserrat font-bold uppercase tracking-widest text-white mb-4">Expertise</h4>
+            <ul className="space-y-2.5 text-sm font-montserrat">
+              <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Product Engineering</Link></li>
+              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Cloud & DevOps</Link></li>
+              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors font-montserrat">AI & RAG Workflows</Link></li>
+              <li><Link to="/about" className="hover:text-violet-400 transition-colors font-montserrat">About Our Team</Link></li>
+              <li><Link to="/contact" className="hover:text-violet-400 transition-colors font-montserrat">Consultation</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2.5">
+          <div className="font-montserrat">
+            <h4 className="text-xs font-montserrat font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h4>
+            <ul className="space-y-3 text-sm font-montserrat">
+              <li className="flex items-center gap-2.5 font-montserrat">
                 <Mail className="h-4 w-4 text-violet-400 shrink-0" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors">{CONTACT_EMAIL}</a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_EMAIL}</a>
               </li>
-              <li className="flex items-center gap-2.5">
+              <li className="flex items-center gap-2.5 font-montserrat">
                 <Phone className="h-4 w-4 text-violet-400 shrink-0" />
-                <span className="hover:text-violet-400 transition-colors">{CONTACT_PHONE}</span>
+                <span className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_PHONE}</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2.5 font-montserrat">
                 <MapPin className="h-4 w-4 text-violet-400 shrink-0 mt-0.5" />
-                <span className="hover:text-violet-400 transition-colors">{OFFICE_ADDRESS}</span>
+                <span className="hover:text-violet-400 transition-colors font-montserrat">{OFFICE_ADDRESS}</span>
               </li>
             </ul>
           </div>
 
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-          <p>© {new Date().getFullYear()} AD FutureStack Solutions. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span className="hover:text-violet-400 cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-violet-400 cursor-pointer transition-colors">Terms of Service</span>
-            <span className="hover:text-violet-400 cursor-pointer transition-colors">Security SLA</span>
+        <div className="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-montserrat text-slate-500">
+          <p className="font-montserrat">© {new Date().getFullYear()} AD FutureStack Solutions. All rights reserved.</p>
+          <div className="flex items-center gap-6 font-montserrat">
+            <span className="hover:text-violet-400 cursor-pointer transition-colors font-montserrat">Privacy Policy</span>
+            <span className="hover:text-violet-400 cursor-pointer transition-colors font-montserrat">Terms of Service</span>
+            <span className="hover:text-violet-400 cursor-pointer transition-colors font-montserrat">Security SLA</span>
           </div>
         </div>
       </div>

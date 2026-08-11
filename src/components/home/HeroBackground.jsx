@@ -7,19 +7,17 @@ export default function HeroBackground({ bgScale = 1, bgOpacity = 1, mousePos = 
         opacity: bgOpacity,
       }}
     >
-      {/* 1. Full Image Background (Modern IT Team Working) */}
+      {/* 1. Full High-Res Image Background */}
       <img
-        src=""
-        alt="IT Solutions & Services Team Workspace"
-        className="w-full h-full object-cover filter brightness-[0.45] contrast-[1.1]"
+        src="https://images.unsplash.com/photo-1737365505612-7ff3ef8f7970?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="AD FutureStack Modern Workspace"
+        className="w-full h-full object-cover filter brightness-[] contrast-[1.2]"
       />
 
-      {/* 2. Dark Tint Overlay for Base Readability */}
-      <div className="absolute inset-0 bg-slate-950/20 mix-blend-multiply" />
 
 
-      {/* 5. Subtle Grid / Vector Lines */}
-      <div className="absolute inset-0 bg-tech-grid-dark opacity-30 mix-blend-overlay" />
+      {/* 3. Subtle Vector Grid Pattern */}
+      <div className="absolute inset-0 bg-tech-grid-dark opacity-20 mix-blend-overlay" />
     </div>
   )
 }

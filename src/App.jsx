@@ -14,10 +14,10 @@ import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-sans selection:bg-violet-700 selection:text-white">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-violet-700 selection:text-white w-full overflow-x-hidden">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 w-full bg-white font-montserrat">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
