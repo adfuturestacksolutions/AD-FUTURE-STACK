@@ -1,48 +1,229 @@
-import { Cpu, Code, ShieldCheck, Cloud, Layers, Smartphone, ArrowRight } from 'lucide-react'
+import React from "react";
 
-const iconMap = {
-  'product-engineering': <Code className="h-5 w-5" />,
-  'backend-apis': <Layers className="h-5 w-5" />,
-  'mobile-engineering': <Smartphone className="h-5 w-5" />,
-  'ai-automation': <Cpu className="h-5 w-5" />,
-  'infrastructure': <Cloud className="h-5 w-5" />,
-  'cyber-security': <ShieldCheck className="h-5 w-5" />
-}
+const ServiceVisual = ({ type }) => {
+  if (type === "web") {
+    return (
+      <div className="service-visual web-visual">
+        <div className="browser-window">
+          <div className="browser-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-export default function ServiceCard({ service }) {
+          <div className="browser-content">
+            <div className="browser-sidebar"></div>
+
+            <div className="browser-main">
+              <div className="browser-title"></div>
+
+              <div className="browser-cards">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+
+              <div className="browser-chart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="visual-badge">WEB</div>
+      </div>
+    );
+  }
+
+  if (type === "app") {
+    return (
+      <div className="service-visual app-visual">
+        <div className="phone-device">
+          <div className="phone-notch"></div>
+
+          <div className="phone-screen">
+            <div className="phone-header"></div>
+
+            <div className="phone-card-large"></div>
+
+            <div className="phone-small-cards">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div className="phone-bottom-nav">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+        </div>
+
+        <div className="app-floating-dot"></div>
+        <div className="app-floating-line"></div>
+      </div>
+    );
+  }
+
+  if (type === "ai") {
+    return (
+      <div className="service-visual ai-visual">
+        <div className="ai-core">
+          <div className="ai-core-inner">
+            AI
+          </div>
+        </div>
+
+        <div className="ai-node node-one">
+          API
+        </div>
+
+        <div className="ai-node node-two">
+          CRM
+        </div>
+
+        <div className="ai-node node-three">
+          DATA
+        </div>
+
+        <div className="ai-node node-four">
+          n8n
+        </div>
+
+        <div className="ai-connection connection-one"></div>
+        <div className="ai-connection connection-two"></div>
+        <div className="ai-connection connection-three"></div>
+        <div className="ai-connection connection-four"></div>
+      </div>
+    );
+  }
+
+  if (type === "marketing") {
+    return (
+      <div className="service-visual marketing-visual">
+        <div className="marketing-dashboard">
+          <div className="marketing-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div className="marketing-content">
+            <div className="marketing-top">
+              <div></div>
+              <div></div>
+            </div>
+
+            <div className="marketing-chart">
+              <div className="bar bar-one"></div>
+              <div className="bar bar-two"></div>
+              <div className="bar bar-three"></div>
+              <div className="bar bar-four"></div>
+              <div className="bar bar-five"></div>
+            </div>
+
+            <div className="marketing-footer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 flex flex-col justify-between group hover:-translate-y-1.5 transition-all duration-300">
-      <div className="relative h-52 overflow-hidden">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        {/* Purple Icon Badge overlapping bottom right of image */}
-        <div className="absolute bottom-4 right-4 h-12 w-12 rounded-xl bg-violet-700 text-white flex items-center justify-center shadow-lg border-2 border-white">
-          {iconMap[service.id] || <Cpu className="h-5 w-5" />}
+    <div className="service-visual saas-visual">
+      <div className="saas-dashboard">
+        <div className="saas-sidebar">
+          <div></div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div className="saas-main">
+          <div className="saas-top">
+            <div></div>
+            <div></div>
+          </div>
+
+          <div className="saas-metrics">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div className="saas-chart">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
         </div>
       </div>
 
-      <div className="p-6 space-y-3">
-        <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-slate-500 block">
-          {service.layer}
-        </span>
-        <h3 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors">
-          {service.title}
-        </h3>
-        <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-          {service.description}
-        </p>
+      <div className="tenant tenant-one">A</div>
+      <div className="tenant tenant-two">B</div>
+      <div className="tenant tenant-three">C</div>
+    </div>
+  );
+};
+
+const ServiceCard = ({ service }) => {
+  return (
+    <article
+      className={`service-card ${
+        service.featured ? "service-card-featured" : ""
+      }`}
+    >
+      <div className="service-card-number">
+        {service.number}
       </div>
 
-      <div className="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
-        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Enterprise Ready</span>
-        <span className="text-xs font-bold text-slate-900 group-hover:text-violet-700 transition-colors inline-flex items-center gap-1">
-          <span>Explore</span>
-          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+      <div className="service-card-content">
+        <span className="service-card-label">
+          DIGITAL ENGINEERING
         </span>
+
+        <h3>{service.title}</h3>
+
+        <p>{service.description}</p>
+
+        <div className="service-tech-list">
+          {service.technologies.map((technology) => (
+            <span key={technology}>
+              {technology}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={`/services/${service.title
+            .toLowerCase()
+            .replace(/&/g, "and")
+            .replace(/\s+/g, "-")}`}
+          className="service-explore"
+        >
+          <span>Explore Service</span>
+          <strong>→</strong>
+        </a>
       </div>
-    </div>
-  )
-}
+
+      <ServiceVisual type={service.type} />
+    </article>
+  );
+};
+
+export default ServiceCard;
