@@ -1,23 +1,24 @@
-import Hero from '../sections/Hero.jsx' // 1. Overview
-import Services from '../sections/Services.jsx' // 2. Capabilities
-import Solutions from '../sections/Solutions.jsx' // 3. Solutions
-import Industries from '../sections/Industries.jsx' // 4. Industries
-import FeaturedProjects from '../sections/FeaturedProjects.jsx' // 5. Case Studies
-import Insights from '../sections/Insights.jsx' // 6. Insights
-import About from '../sections/About.jsx' // 7. About
-import CTA from '../sections/CTA.jsx' // 8. Start a Conversation
+import Hero from '../components/home/Hero.jsx'
+import Container from '../components/common/Container.jsx'
+import Story from '../components/about/Story.jsx'
+import WhatWeDo from '../components/home/WhatWeDo.jsx'
+import FeaturedProjects from '../components/home/FeaturedProjects.jsx'
+import Process from '../components/home/Process.jsx'
+import Technologies from '../components/home/Technologies.jsx'
+import HomeCTA from '../components/home/HomeCTA.jsx'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <Solutions />
-      <Industries />
+      <Container>
+        <Story />
+      </Container>
+      <WhatWeDo />
       <FeaturedProjects />
-      <Insights />
-      <About />
-      <CTA />
+      <Process />
+      <Technologies />
+      <HomeCTA />
     </>
   )
 }

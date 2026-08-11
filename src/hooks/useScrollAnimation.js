@@ -1,38 +1,30 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-/**
- * Reveals an element once it scrolls into view, respecting reduced-motion
- * preferences. Returns a ref to attach and a boolean for visibility.
- */
-export default function useScrollAnimation({ threshold = 0.2, once = true } = {}) {
+export function useScrollAnimation(options = {}) {
   const ref = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const node = ref.current
-    if (!node) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true)
+        if (options.once !== false && ref.current) {
+          observer.unobserve(ref.current)
+        }
+      } else if (options.once === false) {
+        setIsVisible(false)
+      }
+    }, { threshold: options.threshold || 0.15, ...options })
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) {
-      setIsVisible(true)
-      return
+    const currentRef = ref.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          if (once) observer.unobserve(node)
-        } else if (!once) {
-          setIsVisible(false)
-        }
-      },
-      { threshold }
-    )
-
-    observer.observe(node)
-    return () => observer.disconnect()
-  }, [threshold, once])
+    return () => {
+      if (currentRef) observer.unobserve(currentRef)
+    }
+  }, [options])
 
   return [ref, isVisible]
 }

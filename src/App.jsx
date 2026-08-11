@@ -1,32 +1,32 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
+import Navbar from './components/layout/Navbar.jsx'
+import Footer from './components/layout/Footer.jsx'
+import ScrollToTop from './components/layout/ScrollToTop.jsx'
+
 import Home from './pages/Home.jsx'
-import CapabilitiesPage from './pages/CapabilitiesPage.jsx'
-import SolutionsPage from './pages/SolutionsPage.jsx'
-import IndustriesPage from './pages/IndustriesPage.jsx'
-import CaseStudiesPage from './pages/CaseStudiesPage.jsx'
-import InsightsPage from './pages/InsightsPage.jsx'
-import AboutPage from './pages/AboutPage.jsx'
-import ContactPage from './pages/ContactPage.jsx'
+import Services from './pages/Services.jsx'
+import Capabilities from './pages/Capabilities.jsx'
+import Solutions from './pages/Solutions.jsx'
+import Projects from './pages/Projects.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-ink font-sans">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-sans selection:bg-violet-600 selection:text-white">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/capabilities" element={<CapabilitiesPage />} />
-          <Route path="/services" element={<CapabilitiesPage />} />
-          <Route path="/solutions" element={<SolutionsPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/projects" element={<CaseStudiesPage />} />
-          <Route path="/insights" element={<InsightsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/capabilities" element={<Capabilities />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/case-studies" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

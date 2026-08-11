@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#0E1116',
-          surface: '#161B22',
-          line: '#242B36',
+          DEFAULT: '#FFFFFF',
+          surface: '#F8FAFC',
+          line: '#E2E8F0',
         },
         signal: {
-          violet: '#7C5CFC',
-          amber: '#FFB020',
+          violet: '#2563EB',
+          amber: '#D97706',
         },
-        fog: '#AEB6C2',
-        paper: '#F5F6F8',
+        fog: '#475569',
+        paper: '#0F172A',
       },
       fontFamily: {
         display: ['Montserrat', 'sans-serif'],
@@ -23,7 +23,7 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
-        'grid-fade': 'linear-gradient(180deg, rgba(124,92,252,0.08) 0%, rgba(14,17,22,0) 60%)',
+        'grid-fade': 'linear-gradient(180deg, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0) 60%)',
       },
       keyframes: {
         stackUp: {

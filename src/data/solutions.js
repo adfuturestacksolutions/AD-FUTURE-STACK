@@ -1,38 +1,26 @@
 export const solutions = [
   {
-    id: 'enterprise-modernization',
-    title: 'Enterprise Modernization Stack',
-    tagline: 'Legacy Refactoring & Cloud Migration',
-    description: 'Transform monolithic systems into resilient, high-speed microservices and edge architectures without downtime.',
-    features: ['Zero-downtime migration strategy', 'Event-driven microservices', 'Automated regression test suites', 'Enterprise RBAC & compliance'],
-    icon: '⚡',
-    badge: 'Popular for Enterprise',
+    id: 'saas-starter',
+    title: 'Enterprise SaaS Blueprint',
+    subtitle: 'Turnkey SaaS Multi-Tenant Engine',
+    description: 'Pre-built multi-tenant authentication, team workspaces, RBAC security, and Stripe billing engine.',
+    features: ['Multi-Tenant Database Isolation', 'Stripe Billing & Subscriptions', 'Granular Role-Based Access (RBAC)', 'Audit Logging & Analytics'],
+    badge: 'Popular'
   },
   {
-    id: 'mvp-launchpad',
-    title: 'Startup MVP Launchpad',
-    tagline: '0-to-1 Product Development',
-    description: 'Ship high-performing, investor-ready SaaS or mobile platforms in 6-8 weeks with production infrastructure.',
-    features: ['Rapid prototype to production', 'Scalable multi-tenant backend', 'Integrated analytics & billing', 'Staging & CI/CD from day 1'],
-    icon: '🚀',
-    badge: 'Fastest Delivery',
+    id: 'ai-rag-platform',
+    title: 'Enterprise AI Vector Suite',
+    subtitle: 'RAG Knowledge Intelligence Engine',
+    description: 'Secure, private enterprise search and synthesis platform connecting internal documentation with LLMs.',
+    features: ['Real-time Vector Embedding', 'Role-Restricted Document Ingestion', 'Semantic HyDE Search', 'Zero Data Leakage Security'],
+    badge: 'High Speed'
   },
   {
-    id: 'ai-data-engine',
-    title: 'AI & Data Integration Engine',
-    tagline: 'Intelligent Workflows & RAG Systems',
-    description: 'Embed domain-tuned LLM agents, vector search, and real-time inference directly into customer applications.',
-    features: ['Custom RAG & VectorDB setup', 'LLM API gateway & rate limiting', 'Real-time telemetry & guardrails', 'Private data isolation'],
-    icon: '🧠',
-    badge: 'AI Powered',
-  },
-  {
-    id: 'scalable-web-platform',
-    title: 'High-Scale Web Platform',
-    tagline: 'Headless & High-Traffic Architecture',
-    description: 'Ultra-fast web platforms engineered to process millions of concurrent requests with sub-100ms global latency.',
-    features: ['Headless CMS & GraphQL APIs', 'Global edge caching & CDN setup', 'Automated auto-scaling infrastructure', '99.99% uptime guarantee'],
-    icon: '🌐',
-    badge: 'High Performance',
-  },
+    id: 'ecommerce-engine',
+    title: 'Headless Commerce Architecture',
+    subtitle: 'Ultra-Fast Sub-Second Storefront',
+    description: 'Composable API-first storefront architecture with global CDN caching and instant checkout integration.',
+    features: ['Headless Shopify/Medusa Core', 'Global Edge Caching', 'Instant Search & Filter', 'Omnichannel Inventory'],
+    badge: 'Enterprise'
+  }
 ]
