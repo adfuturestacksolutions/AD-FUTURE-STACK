@@ -25,13 +25,13 @@ const Services = () => {
               to help businesses grow, scale and lead.
             </p>
 
-            <div className="services-hero-actions">
-              <a href="#our-services" className="services-primary-btn">
+            <div className="services-hero-actions ">
+              <a href="#our-services" className="services-primary-btn text-lg">
                 Explore Services
                 <span>→</span>
               </a>
 
-              <a href="/contact" className="services-text-btn">
+              <a href="/contact" className="services-text-btn text-xl">
                 Start a Conversation
                 <span>↗</span>
               </a>
@@ -94,12 +94,12 @@ const Services = () => {
                         >
                           <stop
                             offset="0%"
-                            stopColor="#3b82f6"
+                            stopColor="#7c3aed"
                             stopOpacity="0.25"
                           />
                           <stop
                             offset="100%"
-                            stopColor="#3b82f6"
+                            stopColor="#7c3aed"
                             stopOpacity="0"
                           />
                         </linearGradient>
@@ -113,7 +113,7 @@ const Services = () => {
                       <path
                         d="M0,150 C60,130 70,145 115,105 C160,65 170,120 215,90 C260,60 275,85 315,55 C355,25 380,60 410,35 C445,15 470,30 500,10"
                         fill="none"
-                        stroke="#2563eb"
+                        stroke="#6d28d9"
                         strokeWidth="4"
                       />
                     </svg>

@@ -54,11 +54,7 @@ export default function Navbar() {
               <span>Let's Build Together</span>
             </div>
           </div>
-          <div className="flex items-center gap-4 font-montserrat">
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors font-montserrat">Twitter</a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors font-montserrat">Facebook</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-violet-400 transition-colors font-montserrat">LinkedIn</a>
-          </div>
+
         </div>
       </div>
 
@@ -103,19 +99,17 @@ export default function Navbar() {
                   to={link.to}
                   end={link.to === '/'}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 text-xs sm:text-sm font-semibold transition-colors uppercase tracking-wider font-montserrat ${
-                      isActive || isParentActive
-                        ? 'text-violet-700 font-extrabold'
-                        : 'text-slate-800 hover:text-violet-700'
+                    `flex items-center gap-1 text-xs sm:text-sm font-semibold transition-colors uppercase tracking-wider font-montserrat ${isActive || isParentActive
+                      ? 'text-violet-700 font-extrabold'
+                      : 'text-slate-800 hover:text-violet-700'
                     }`
                   }
                 >
                   <span>{link.label}</span>
                   {hasChildren && (
                     <ChevronDown
-                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
-                        activeDropdown === link.label ? 'rotate-180 text-violet-700' : ''
-                      }`}
+                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${activeDropdown === link.label ? 'rotate-180 text-violet-700' : ''
+                        }`}
                     />
                   )}
                 </NavLink>
@@ -135,8 +129,7 @@ export default function Navbar() {
                             to={child.to}
                             onClick={() => setActiveDropdown(null)}
                             className={({ isActive }) =>
-                              `group flex items-start gap-3 rounded-xl p-3 transition-colors font-montserrat ${
-                                isActive ? 'bg-violet-50 text-violet-700' : 'hover:bg-slate-50 text-slate-700'
+                              `group flex items-start gap-3 rounded-xl p-3 transition-colors font-montserrat ${isActive ? 'bg-violet-50 text-violet-700' : 'hover:bg-slate-50 text-slate-700'
                               }`
                             }
                           >
@@ -212,8 +205,7 @@ export default function Navbar() {
                     end={link.to === '/'}
                     onClick={() => !hasChildren && setOpen(false)}
                     className={({ isActive }) =>
-                      `text-sm font-bold flex items-center justify-between uppercase tracking-wider font-montserrat ${
-                        isActive ? 'text-violet-700 font-extrabold' : 'text-slate-800'
+                      `text-sm font-bold flex items-center justify-between uppercase tracking-wider font-montserrat ${isActive ? 'text-violet-700 font-extrabold' : 'text-slate-800'
                       }`
                     }
                   >
@@ -228,8 +220,7 @@ export default function Navbar() {
                           to={child.to}
                           onClick={() => setOpen(false)}
                           className={({ isActive }) =>
-                            `text-xs py-1.5 transition-colors flex items-center gap-2 font-montserrat ${
-                              isActive ? 'text-violet-700 font-bold' : 'text-slate-600 hover:text-slate-950'
+                            `text-xs py-1.5 transition-colors flex items-center gap-2 font-montserrat ${isActive ? 'text-violet-700 font-bold' : 'text-slate-600 hover:text-slate-950'
                             }`
                           }
                         >

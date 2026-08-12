@@ -264,10 +264,7 @@ export default function Services() {
 
           <div className="services-hero-content">
 
-            <span className="hero-kicker">
-              ENGINEERING EXCELLENCE · DIGITAL INNOVATION
-            </span>
-
+            <br></br>
             <h1>
               Excellent software
               <br />
@@ -501,9 +498,8 @@ export default function Services() {
 
           {services.map((service, index) => (
             <article
-              className={`full-service-card ${
-                index === 2 ? "featured-service" : ""
-              }`}
+              className={`full-service-card ${index === 2 ? "featured-service" : ""
+                }`}
               key={service.number}
             >
 

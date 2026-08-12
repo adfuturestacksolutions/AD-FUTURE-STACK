@@ -15,13 +15,11 @@ export default function PageHero({
           alt={title}
           className="w-full h-full object-cover opacity-30 mix-blend-luminosity"
         />
-        {/* Dark Gradient Overlay for Maximum Text Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/80 to-slate-950" />
+        {/* Pure Black Gradient Overlay for Maximum Text Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black" />
         <div className="absolute inset-0 bg-tech-grid-dark opacity-40" />
       </div>
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/15 blur-3xl rounded-full pointer-events-none" />
-      
       <Container className="relative z-10 text-center">
         {eyebrow && (
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/40 text-xs font-mono font-bold tracking-widest text-cyan-400 uppercase mb-6 shadow-md backdrop-blur-md">
@@ -30,7 +28,7 @@ export default function PageHero({
           </div>
         )}
 
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white uppercase tracking-tight max-w-5xl mx-auto drop-shadow-md">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-white uppercase tracking-tight max-w-5xl mx-auto drop-shadow-md">
           {title}
         </h1>
 
